@@ -1,5 +1,3 @@
-import userIcon from "../assets/user-icon.png";
-
 export default function UserMessage({ message }) {
   return (
     <div className="flex justify-end">
