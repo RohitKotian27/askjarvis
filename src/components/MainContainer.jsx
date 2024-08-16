@@ -33,12 +33,12 @@ export default function MainContainer({
         <div className="h-[90%] overflow-y-auto overflow-hidden scroll-smooth">
           {messages?.map((message, index) => (
             <div key={index}>
+              <div ref={msgEnd} />
               {message.isBot ? (
                 <BotMessage message={message} />
               ) : (
                 <UserMessage message={message} />
               )}
-              <div ref={msgEnd} />
             </div>
           ))}
         </div>
