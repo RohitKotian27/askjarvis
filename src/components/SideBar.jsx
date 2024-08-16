@@ -23,7 +23,7 @@ export default function SideBar({ setUserInput }) {
         </div>
       </div>
       {/* Mobile Version */}
-      <div className="flex md:hidden items-center fixed px-4 py-3 w-full bg-slate-800">
+      <div className="z-10 flex md:hidden items-center fixed px-4 py-3 w-full bg-slate-800">
         <img src={appLogo} alt="Logo" className="mr-3 w-10" />
         <span className="text-xl font-medium">J.A.R.V.I.S</span>
       </div>
