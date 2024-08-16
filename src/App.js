@@ -7,7 +7,9 @@ function App() {
   const [userInput, setUserInput] = useState("");
   const [messages, setMessages] = useState([
     {
-      text: ["Hi, I am Jarvis your AI Assitant. I am ready to help you!!!"],
+      text: [
+        "Hi, I am Jarvis your personal AI Assitant. I am ready to help you!!!",
+      ],
       isBot: true,
     },
   ]);
