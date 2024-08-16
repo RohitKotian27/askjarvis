@@ -1,7 +1,7 @@
 const preDefinedQueries = [
-  "What is Programmming ?",
-  "How to use API ?",
-  "What is Artifical Intelligence ?",
+  "What is Programming?",
+  "How to use an API?",
+  "What is Artificial Intelligence?",
 ];
 
 export default function PreDefinedQuestions({ setUserInput }) {
