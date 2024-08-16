@@ -8,7 +8,7 @@ function App() {
   const [messages, setMessages] = useState([
     {
       text: [
-        "Hi, I am Jarvis your personal AI Assitant. I am ready to help you!!!",
+        "Hi there! I'm Jarvis, your new chat buddy! I'm here to help answer any questions you might have, provide some entertainment, or just chat about your day. What's on your mind?",
       ],
       isBot: true,
     },
