@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useState } from "react";
+import SideBar from "./components/SideBar";
+import MainContainer from "./components/MainContainer";
 
 function App() {
+  const [userInput, setUserInput] = useState("");
+  const [messages, setMessages] = useState([
+    {
+      text: ["Hi, I am Jarvis your AI Assitant. I am ready to help you!!!"],
+      isBot: true,
+    },
+  ]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex h-lvh">
+      <SideBar setUserInput={setUserInput} />
+      <MainContainer
+        messages={messages}
+        setMessages={setMessages}
+        userInput={userInput}
+        setUserInput={setUserInput}
+      />
     </div>
   );
 }
