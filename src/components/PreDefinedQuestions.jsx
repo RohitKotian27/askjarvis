@@ -4,9 +4,10 @@ const preDefinedQueries = [
   "What is Artificial Intelligence?",
 ];
 
-export default function PreDefinedQuestions({ setUserInput }) {
+export default function PreDefinedQuestions({ setUserInput, setShowNav }) {
   function handleClick(elem) {
     setUserInput(elem);
+    setShowNav(false);
     document.querySelector('input[placeHolder="Send a message"]').focus();
   }
 
@@ -16,7 +17,7 @@ export default function PreDefinedQuestions({ setUserInput }) {
         <button
           key={index}
           onClick={() => handleClick(elem)}
-          className="text-slate-300 text-md border-[1px] border-slate-300 text-center p-2 rounded-md mb-4 size-full"
+          className="text-slate-300 text-md border-[1px] border-slate-300 text-center p-2 rounded-md my-2 size-full"
         >
           {elem}
         </button>

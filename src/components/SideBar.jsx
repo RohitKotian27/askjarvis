@@ -1,8 +1,14 @@
 import appLogo from "../assets/chatgpt.svg";
-import newChatBtn from "../assets/add-30.png";
-import PreDefinedQuestions from "../components/PreDefinedQuestions";
+import PreDefinedQuestions from "./PreDefinedQuestions";
+import ReloadButton from "./ReloadButton";
+import { useState } from "react";
 
 export default function SideBar({ setUserInput }) {
+  const [showNav, setShowNav] = useState(false);
+  function handleNavBar() {
+    setShowNav((prev) => !prev);
+  }
+
   return (
     <>
       {/* Desktop Version */}
@@ -12,20 +18,48 @@ export default function SideBar({ setUserInput }) {
             <img src={appLogo} alt="Logo" className="mr-3" />
             <span className="text-xl font-medium">J.A.R.V.I.S</span>
           </div>
-          <button
-            onClick={() => window.location.reload()}
-            className="flex items-center justify-center size-full my-8 bg-blue-500 p-3 rounded-md text-md"
-          >
-            <img src={newChatBtn} alt="Add button" className="w-4 mr-1" />
-            New Chat
-          </button>
-          <PreDefinedQuestions setUserInput={setUserInput} />
+          <ReloadButton />
+          <PreDefinedQuestions
+            setUserInput={setUserInput}
+            setShowNav={setShowNav}
+          />
         </div>
       </div>
       {/* Mobile Version */}
-      <div className="z-10 flex md:hidden items-center fixed px-4 py-3 w-full bg-slate-800">
-        <img src={appLogo} alt="Logo" className="mr-3 w-10" />
-        <span className="text-xl font-medium">J.A.R.V.I.S</span>
+      <div className="z-10 md:hidden items-center fixed px-4 py-3 w-full bg-slate-800">
+        <div className="flex justify-between">
+          <div className="flex items-center">
+            <img src={appLogo} alt="Logo" className="mr-3 w-10" />
+            <span className="text-xl font-medium">J.A.R.V.I.S</span>
+          </div>
+          <div
+            className="text-stone-300 border-2 border-stone-300 justify-end p-2 rounded cursor-pointer"
+            onClick={handleNavBar}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              fill="currentColor"
+              className="bi bi-list"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fillRule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+              />
+            </svg>
+          </div>
+        </div>
+        {showNav && (
+          <div className="my-8">
+            <ReloadButton />
+            <PreDefinedQuestions
+              setUserInput={setUserInput}
+              setShowNav={setShowNav}
+            />
+          </div>
+        )}
       </div>
     </>
   );
