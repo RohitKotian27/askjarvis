@@ -1,4 +1,5 @@
 import botLogo from "../assets/chatgptLogo.svg";
+import CopyText from "./CopyText";
 
 export default function BotMessage({ message }) {
   return (
@@ -11,6 +12,7 @@ export default function BotMessage({ message }) {
             {message.text.length > 1 && <br />}
           </div>
         ))}
+        <CopyText message={message} />
       </div>
     </div>
   );

@@ -11,6 +11,7 @@ function App() {
         "Hi there! I'm Jarvis, your new chat buddy! I'm here to help answer any questions you might have, provide some entertainment, or just chat about your day. What's on your mind?",
       ],
       isBot: true,
+      initialText: true,
     },
   ]);
 
