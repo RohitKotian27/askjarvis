@@ -1,6 +1,6 @@
-import appLogo from "../assets/chatgpt.svg";
 import PreDefinedQuestions from "./PreDefinedQuestions";
 import ReloadButton from "./ReloadButton";
+import SiteLogo from "./SiteLogo";
 import { useState } from "react";
 
 export default function SideBar({ setUserInput }) {
@@ -14,10 +14,7 @@ export default function SideBar({ setUserInput }) {
       {/* Desktop Version */}
       <div className="hidden md:block basis-3/12 border-r-[1px] border-slate-600">
         <div className="p-6 border-slate-600">
-          <div className="flex items-center">
-            <img src={appLogo} alt="Logo" className="mr-3" />
-            <span className="text-xl font-medium">J.A.R.V.I.S</span>
-          </div>
+          <SiteLogo />
           <ReloadButton />
           <PreDefinedQuestions
             setUserInput={setUserInput}
@@ -28,10 +25,7 @@ export default function SideBar({ setUserInput }) {
       {/* Mobile Version */}
       <div className="z-10 md:hidden items-center fixed px-4 py-3 w-full bg-slate-800">
         <div className="flex justify-between">
-          <div className="flex items-center">
-            <img src={appLogo} alt="Logo" className="mr-3 w-10" />
-            <span className="text-xl font-medium">J.A.R.V.I.S</span>
-          </div>
+          <SiteLogo />
           <div
             className="text-stone-300 border-2 border-stone-300 justify-end p-2 rounded cursor-pointer"
             onClick={handleNavBar}
