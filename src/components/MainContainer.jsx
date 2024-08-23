@@ -2,16 +2,10 @@ import BotMessage from "../components/BotMessage";
 import UserMessage from "../components/UserMessage";
 import QueryForm from "../components/QueryForm";
 import sendQueryToGrocApi from "../groqApi";
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 
-export default function MainContainer({
-  messages,
-  setMessages,
-  userInput,
-  setUserInput,
-}) {
+const MainContainer = ({ messages, setMessages, userInput, setUserInput }) => {
   const msgEnd = useRef(null);
-
   async function handleFormSubmit(e) {
     e.preventDefault();
     const res = await sendQueryToGrocApi(userInput);
@@ -50,4 +44,6 @@ export default function MainContainer({
       </div>
     </div>
   );
-}
+};
+
+export default React.memo(MainContainer);

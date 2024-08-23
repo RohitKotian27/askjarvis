@@ -1,6 +1,8 @@
 import CopyText from "./CopyText";
+import React from "react";
 
-export default function BotMessage({ message }) {
+const BotMessage = ({ message }) => {
+  console.log("Inside Bot Message");
   return (
     <div className="flex w-fit bg-slate-800 mb-3 px-4 py-3 text-sm rounded-md">
       <div className="h-8 w-8 mr-4 bg-blue-800 flex-none rounded-sm">
@@ -27,4 +29,6 @@ export default function BotMessage({ message }) {
       </div>
     </div>
   );
-}
+};
+
+export default React.memo(BotMessage);

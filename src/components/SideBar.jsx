@@ -1,9 +1,9 @@
 import PreDefinedQuestions from "./PreDefinedQuestions";
 import ReloadButton from "./ReloadButton";
 import SiteLogo from "./SiteLogo";
-import { useState } from "react";
+import React, { useState } from "react";
 
-export default function SideBar({ setUserInput }) {
+const SideBar = ({ setUserInput }) => {
   const [showNav, setShowNav] = useState(false);
   function handleNavBar() {
     setShowNav((prev) => !prev);
@@ -57,4 +57,6 @@ export default function SideBar({ setUserInput }) {
       </div>
     </>
   );
-}
+};
+
+export default React.memo(SideBar);
