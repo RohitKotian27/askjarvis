@@ -8,12 +8,16 @@ const MainContainer = ({ messages, setMessages, userInput, setUserInput }) => {
   const msgEnd = useRef(null);
   async function handleFormSubmit(e) {
     e.preventDefault();
-    const res = await sendQueryToGrocApi(userInput);
     setMessages([
       ...messages,
       { text: userInput, isBot: false },
-      { text: res, isBot: true },
+      { isBot: true, isLoading: true, skipCopy: true },
     ]);
+    const res = await sendQueryToGrocApi(userInput);
+    setMessages((prevState) => {
+      prevState[prevState.length - 1] = { text: res, isBot: true };
+      return [...prevState];
+    });
     setUserInput("");
   }
 

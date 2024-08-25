@@ -12,7 +12,7 @@ export default function CopyText({ message }) {
   return (
     <div
       className={`cursor-pointer my-2 bg-slate-500 w-fit p-2 rounded-md focus:bg-none ${
-        message?.initialText ? "hidden" : ""
+        message?.skipCopy ? "hidden" : ""
       }`}
       data-tooltip-id="copy-tooltip"
       data-tooltip-content={copyText}
