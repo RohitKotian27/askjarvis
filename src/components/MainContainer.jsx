@@ -13,12 +13,12 @@ const MainContainer = ({ messages, setMessages, userInput, setUserInput }) => {
       { text: userInput, isBot: false },
       { isBot: true, isLoading: true, skipCopy: true },
     ]);
+    setUserInput("");
     const res = await sendQueryToGrocApi(userInput);
     setMessages((prevState) => {
       prevState[prevState.length - 1] = { text: res, isBot: true };
       return [...prevState];
     });
-    setUserInput("");
   }
 
   useEffect(() => {
