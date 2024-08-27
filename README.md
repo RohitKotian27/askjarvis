@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+**Ask Jarvis**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+================
 
-## Available Scripts
+Welcome to Ask Jarvis, a conversational AI chatbot built using React JS, Groq APIs & Meta LLAMA 3.1 model.
 
-In the project directory, you can run:
+**About**
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Ask Jarvis is a conversational AI chatbot that uses natural language processing (NLP) and machine learning algorithms to understand and respond to user queries. The bot is designed to be engaging, informative, and helpful, covering a wide range of topics and subjects.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Features**
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Conversational interface: Users can interact with Ask Jarvis using a conversational interface, asking questions and engaging in discussions.
 
-### `npm run build`
+- NLP-powered understanding: The bot uses NLP algorithms to understand and interpret user queries, providing accurate and relevant responses.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Machine learning-based improvements: The bot learns and improves over time, adapting to user behavior and feedback to provide better responses.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Multi-topic coverage: Ask Jarvis covers a wide range of topics, from general knowledge to specific domains like science, technology, and more.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Getting Started**
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Visit the Ask Jarvis website: [https://askjarvis.netlify.app](https://askjarvis.netlify.app)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Start a conversation: Type a question or statement in the chat window and press enter to start a conversation with the bot.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Explore the bot's capabilities: Try asking different types of questions, using different tones and language styles to see how the bot responds.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+**Disclaimer**
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+While every effort has been made to ensure the accuracy and quality of the responses provided by Ask Jarvis, the bot is not perfect and may make mistakes. Please use the information provided at your own discretion and verify any sensitive or critical information.
