@@ -8,7 +8,7 @@ export default function PreDefinedQuestions({ setUserInput, setShowNav }) {
   function handleClick(elem) {
     setUserInput(elem);
     setShowNav(false);
-    document.querySelector('input[placeHolder="Send a message"]').focus();
+    document.querySelector('input[id="sendMessage"]').focus();
   }
 
   return (

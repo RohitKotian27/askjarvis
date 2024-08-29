@@ -14,8 +14,9 @@ export default function QueryForm({
   const handleVoiceInput = () => SpeechRecognition.startListening();
 
   useEffect(() => {
+    console.log("Effect called");
     setUserInput(transcript);
-  }, [transcript]);
+  }, [transcript, setUserInput]);
 
   return (
     <form
@@ -25,6 +26,7 @@ export default function QueryForm({
       <input
         className="w-full bg-transparent px-3 text-sm outline-none"
         type="text"
+        id="sendMessage"
         value={userInput}
         onChange={(e) => setUserInput(e.target.value)}
         placeholder="Send a message or use voice search"
