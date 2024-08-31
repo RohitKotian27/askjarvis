@@ -1,18 +1,14 @@
 import React, { useEffect } from "react";
 import sendBtn from "../assets/send.svg";
 import micBtn from "../assets/mic.svg";
-import SpeechRecognition, {
-  useSpeechRecognition,
-} from "react-speech-recognition";
 
 export default function QueryForm({
   userInput,
   setUserInput,
   handleFormSubmit,
+  transcript,
+  startListening,
 }) {
-  const { transcript } = useSpeechRecognition({ language: "en-IN" });
-  const handleVoiceInput = () => SpeechRecognition.startListening();
-
   useEffect(() => {
     console.log("Effect called");
     setUserInput(transcript);
@@ -32,7 +28,7 @@ export default function QueryForm({
         placeholder="Send a message or use voice search"
         required
       />
-      <div onClick={handleVoiceInput} className="mx-1 cursor-pointer">
+      <div onClick={startListening} className="mx-1 cursor-pointer">
         <img src={micBtn} alt="mic-btn" />
       </div>
       <button>
