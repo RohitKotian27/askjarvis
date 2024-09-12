@@ -13,6 +13,7 @@ export default function PreDefinedQuestions({ setUserInput, setShowNav }) {
 
   return (
     <>
+      <h3 className="mb-3">Sample questions for you to start with &#128521;</h3>
       {preDefinedQueries.map((elem, index) => (
         <button
           key={index}

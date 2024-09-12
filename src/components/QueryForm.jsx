@@ -26,6 +26,7 @@ export default function QueryForm({
         value={userInput}
         onChange={(e) => setUserInput(e.target.value)}
         placeholder="Send a message or use voice search"
+        autoFocus
         required
       />
       <div onClick={startListening} className="mx-1 cursor-pointer">
