@@ -30,7 +30,8 @@ const MainContainer = ({ messages, setMessages, userInput, setUserInput }) => {
 
   useEffect(() => {
     msgEnd.current.scrollIntoView();
-  }, [messages.length]);
+    localStorage.setItem("chatMessages", JSON.stringify(messages));
+  }, [messages]);
 
   return (
     <div className="flex md:basis-9/12 justify-center pb-8 pt-20 md:py-8">
