@@ -2,15 +2,22 @@ import BotMessage from "../components/BotMessage";
 import UserMessage from "../components/UserMessage";
 import QueryForm from "../components/QueryForm";
 import sendQueryToGrocApi from "../groqApi";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import SpeechRecognition, {
   useSpeechRecognition,
 } from "react-speech-recognition";
 
 const MainContainer = ({ messages, setMessages, userInput, setUserInput }) => {
+  const [voiceInput, setVoiceInput] = useState(false);
   const { transcript } = useSpeechRecognition({ language: "en-IN" });
-  const startListening = () => SpeechRecognition.startListening();
-  const stopListening = () => SpeechRecognition.stopListening();
+  const startListening = () => {
+    SpeechRecognition.startListening();
+    setVoiceInput(true);
+  };
+  const stopListening = () => {
+    SpeechRecognition.stopListening();
+    setVoiceInput(false);
+  };
   const msgEnd = useRef(null);
   async function handleFormSubmit(e) {
     e.preventDefault();
@@ -54,6 +61,7 @@ const MainContainer = ({ messages, setMessages, userInput, setUserInput }) => {
           handleFormSubmit={handleFormSubmit}
           transcript={transcript}
           startListening={startListening}
+          voiceInput={voiceInput}
         />
       </div>
     </div>

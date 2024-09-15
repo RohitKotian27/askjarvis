@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import sendBtn from "../assets/send.svg";
 import micBtn from "../assets/mic.svg";
+import micMuteBtn from "../assets/mic-mute.svg";
 
 export default function QueryForm({
   userInput,
@@ -8,6 +9,7 @@ export default function QueryForm({
   handleFormSubmit,
   transcript,
   startListening,
+  voiceInput,
 }) {
   useEffect(() => {
     console.log("Effect called");
@@ -30,7 +32,7 @@ export default function QueryForm({
         required
       />
       <div onClick={startListening} className="mx-1 cursor-pointer">
-        <img src={micBtn} alt="mic-btn" />
+        <img src={voiceInput ? micBtn : micMuteBtn} alt="mic-btn" />
       </div>
       <button>
         <img src={sendBtn} className="mx-1" alt="send-btn" />
