@@ -12,7 +12,6 @@ export default function QueryForm({
   voiceInput,
 }) {
   useEffect(() => {
-    console.log("Effect called");
     setUserInput(transcript);
   }, [transcript, setUserInput]);
 
