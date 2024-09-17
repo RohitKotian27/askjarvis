@@ -43,7 +43,7 @@ const MainContainer = ({ messages, setMessages, userInput, setUserInput }) => {
   return (
     <div className="flex md:basis-9/12 justify-center pb-8 pt-20 md:py-8">
       <div className=" relative w-11/12 md:w-10/12">
-        <div className="h-[90%] overflow-y-auto overflow-hidden scroll-smooth">
+        <div className="h-[93%] md:h-[90%] overflow-y-auto overflow-hidden scroll-smooth">
           {messages?.map((message, index) => (
             <div key={index}>
               <div ref={msgEnd} />
