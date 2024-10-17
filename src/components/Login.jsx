@@ -4,6 +4,7 @@ import axios from "axios";
 import ErrorMessage from "./ErrorMessage";
 
 export default function Login() {
+  // Inside Login Component
   const [error, setError] = useState("");
   const navigate = useNavigate();
   const loginInitialForm = {
