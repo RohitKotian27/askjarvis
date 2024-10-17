@@ -1,14 +1,22 @@
-const preDefinedQueries = [
-  "What is Programming?",
-  "How to use an API?",
-  "What is Artificial Intelligence?",
-];
+import { useNavigate } from "react-router";
 
 export default function PreDefinedQuestions({ setUserInput, setShowNav }) {
+  const navigate = useNavigate();
+  const preDefinedQueries = [
+    "What is Programming?",
+    "How to use an API?",
+    "What is Artificial Intelligence?",
+  ];
+
   function handleClick(elem) {
     setUserInput(elem);
     setShowNav(false);
     document.querySelector('input[id="sendMessage"]').focus();
+  }
+
+  function handleLogout() {
+    sessionStorage.removeItem("loggedInUser");
+    navigate("/login");
   }
 
   return (
@@ -26,6 +34,12 @@ export default function PreDefinedQuestions({ setUserInput, setShowNav }) {
           {elem}
         </button>
       ))}
+      <button
+        onClick={handleLogout}
+        className="text-blue-950 text-md border-[1px] bg-slate-300 font-medium text-center p-2 rounded-md my-2 size-full"
+      >
+        Logout
+      </button>
     </>
   );
 }

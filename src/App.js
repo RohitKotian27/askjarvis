@@ -4,6 +4,9 @@ import SideBar from "./components/SideBar";
 import MainContainer from "./components/MainContainer";
 
 function App() {
+  const { userName } = JSON.parse(
+    sessionStorage.getItem("loggedInUser") || "{}"
+  );
   const initialMessage = localStorage.getItem("chatMessages")
     ? JSON.parse(localStorage.getItem("chatMessages"))
     : [
@@ -21,7 +24,7 @@ function App() {
 
   return (
     <div className="flex h-lvh">
-      <SideBar setUserInput={setUserInput} />
+      <SideBar userName={userName} setUserInput={setUserInput} />
       <MainContainer
         messages={messages}
         setMessages={setMessages}

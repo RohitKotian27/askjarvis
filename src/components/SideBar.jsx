@@ -3,7 +3,7 @@ import ReloadButton from "./ReloadButton";
 import SiteLogo from "./SiteLogo";
 import React, { useState } from "react";
 
-const SideBar = ({ setUserInput }) => {
+const SideBar = ({ userName, setUserInput }) => {
   const [showNav, setShowNav] = useState(false);
   function handleNavBar() {
     setShowNav((prev) => !prev);
@@ -15,6 +15,7 @@ const SideBar = ({ setUserInput }) => {
       <div className="hidden md:block basis-3/12 border-r-[1px] border-slate-600">
         <div className="p-6 border-slate-600">
           <SiteLogo />
+          <div className="text-xl font-medium my-2">Welcome {userName}!</div>
           <ReloadButton />
           <PreDefinedQuestions
             setUserInput={setUserInput}
@@ -47,6 +48,7 @@ const SideBar = ({ setUserInput }) => {
         </div>
         {showNav && (
           <div className="my-8">
+            <div className="text-xl font-medium my-2">Welcome {userName}!</div>
             <ReloadButton />
             <PreDefinedQuestions
               setUserInput={setUserInput}
