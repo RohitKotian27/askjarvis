@@ -1,8 +1,18 @@
 import newChatBtn from "../assets/add-30.png";
 
-export default function ReloadButton() {
+export default function ReloadButton({ handleSave }) {
   function handleReload() {
-    localStorage.removeItem("chatMessages");
+    const defaultMessage = [
+      {
+        text: [
+          "Hi there! I'm Jarvis, your new chat buddy! I'm here to help answer any questions you might have, provide some entertainment, or just chat about your day. What's on your mind?",
+        ],
+        isBot: true,
+        skipCopy: true,
+        isLoading: false,
+      },
+    ];
+    handleSave(defaultMessage);
     window.location.reload();
   }
   return (

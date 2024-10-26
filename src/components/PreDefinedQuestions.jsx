@@ -1,6 +1,10 @@
 import { useNavigate } from "react-router";
 
-export default function PreDefinedQuestions({ setUserInput, setShowNav }) {
+export default function PreDefinedQuestions({
+  setUserInput,
+  setShowNav,
+  handleSave,
+}) {
   const navigate = useNavigate();
   const preDefinedQueries = [
     "What is Programming?",
@@ -15,6 +19,7 @@ export default function PreDefinedQuestions({ setUserInput, setShowNav }) {
   }
 
   function handleLogout() {
+    handleSave();
     sessionStorage.removeItem("loggedInUser");
     navigate("/login");
   }

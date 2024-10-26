@@ -11,6 +11,16 @@ export default function Registration() {
     name: "",
     email: "",
     password: "",
+    userChats: [
+      {
+        text: [
+          "Hi there! I'm Jarvis, your new chat buddy! I'm here to help answer any questions you might have, provide some entertainment, or just chat about your day. What's on your mind?",
+        ],
+        isBot: true,
+        skipCopy: true,
+        isLoading: false,
+      },
+    ],
   };
   const [formData, setFormData] = useState(registrationInitialForm);
   function handleFormSubmit(e) {
@@ -19,7 +29,7 @@ export default function Registration() {
       .post(process.env.REACT_APP_REGISTER_URL, formData)
       .then((res) => {
         if (res.data === "Success") {
-          navigate("/");
+          navigate("/login");
         } else {
           setError(res.data);
         }
