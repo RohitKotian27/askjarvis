@@ -65,7 +65,7 @@ const SideBar = ({ userName, setUserInput, messages, setMessages }) => {
         {showNav && (
           <div className="my-8">
             <div className="text-xl font-medium my-2">Welcome {userName}!</div>
-            <ReloadButton />
+            <ReloadButton handleSave={handleSave} setMessages={setMessages} />
             <PreDefinedQuestions
               setUserInput={setUserInput}
               setShowNav={setShowNav}
