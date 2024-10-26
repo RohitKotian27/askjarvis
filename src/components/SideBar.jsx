@@ -19,7 +19,7 @@ const SideBar = ({ userName, setUserInput, messages }) => {
     axios
       .post(process.env.REACT_APP_SAVE_CHAT_URL, formData)
       .then(() => {
-        console.log("Saved user chats");
+        console.log("Saved user chats in database");
       })
       .catch((err) => console.warn(err));
   }
