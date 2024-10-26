@@ -16,7 +16,7 @@ export default function Registration() {
   function handleFormSubmit(e) {
     e.preventDefault();
     axios
-      .post("https://askjarvis-backend.vercel.app/register", formData)
+      .post(process.env.REACT_APP_REGISTER_URL, formData)
       .then((res) => {
         if (res.data === "Success") {
           navigate("/");

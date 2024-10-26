@@ -15,7 +15,7 @@ export default function Login() {
   function handleFormSubmit(e) {
     e.preventDefault();
     axios
-      .post("https://askjarvis-backend.vercel.app/login", formData)
+      .post(process.env.REACT_APP_LOGIN_URL, formData)
       .then((res) => {
         if (res.data?.message === "Success") {
           sessionStorage.setItem("loggedInUser", JSON.stringify(res.data));
