@@ -32,6 +32,7 @@ function App() {
         userName={userName}
         setUserInput={setUserInput}
         messages={messages}
+        setMessages={setMessages}
       />
       <MainContainer
         messages={messages}

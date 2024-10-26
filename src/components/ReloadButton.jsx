@@ -1,6 +1,6 @@
 import newChatBtn from "../assets/add-30.png";
 
-export default function ReloadButton({ handleSave }) {
+export default function ReloadButton({ handleSave, setMessages }) {
   function handleReload() {
     const defaultMessage = [
       {
@@ -13,7 +13,7 @@ export default function ReloadButton({ handleSave }) {
       },
     ];
     handleSave(defaultMessage);
-    window.location.reload();
+    setMessages(defaultMessage);
   }
   return (
     <button
