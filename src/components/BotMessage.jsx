@@ -1,6 +1,7 @@
 import CopyText from "./CopyText";
 import React from "react";
 import TypeWriter from "./TypeWriter";
+// import SaveText from "./SaveText";
 
 const BotMessage = ({ message }) => {
   return (
@@ -29,7 +30,10 @@ const BotMessage = ({ message }) => {
             </div>
           ))
         )}
-        <CopyText message={message} />
+        <div className="flex">
+          <CopyText message={message} />
+          {/* <SaveText message={message} /> */}
+        </div>
       </div>
     </div>
   );
